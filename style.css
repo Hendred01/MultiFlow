@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --base-color: #ccc;
+    --text-color: #000000;
+    --primary-color: #ccc;
+    --secondary-color: #ccc;
+    --color-1: #ccc;
+    --color-2: #ccc;
+    --color-3: #ccc;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    padding: 1em;
+    background: linear-gradient(#0B2545, #2CA5F8);
+   /* background-color: var(--base-color);*/
+    min-height: 100vh;
+   /* background-image: url(Images/carlos-muza-hpjSkU2UYSU-unsplash.jpg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Merriweather', Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: Merriweather, Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    height: 60px;
+    background: linear-gradient(#0B2545, #2CA5F8);
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    /*  margin: 1em auto 3em auto; */
+    width: min-content(1000px, 100%);
+}
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* 
+    list-style-type: none;
+    gap: 2em; */
+}
+
+nav li first-child {
+    height: 50px;
+    /* 
+    margin-right: auto;
+    font-family: Merriweather Poppins;
+    font-weight: bold; */
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav .home-link{
+    margin-right: auto;
+}
+
+nav svg{
+    fill: var(--text-color);
+}
+
+#sidebar-active{
+    display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button, utton{
+    display: none;
+}
+nav a:hover {
+    background-color: #f0f0f0;
+    text-decoration: underline;
+}
+
+nav li :first-child {
+    margin-right: auto;
+}
+
+header, section {
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--color-1);
+    padding: (2em, 15%);
+    border-radius: 1em;
+}
+
+.fex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container {
+    flex: 0 1 34em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.text-container p {
+    margin: .75em 0 1em 0;
+    font-size: 1.25rem;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: .75em 1.25em;
+    border-radius: .25em;
+    font-weight: 600;
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+section {
+    padding: 3em min(2em, 15%);
+    background-color: var(--color-2);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.25rem;
+}
+
+section#my-work {
+    background-color: var(--color-3);
+}
+
+.grid-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas: 
+    "img-1 img-1 img-2 img-3"
+     "img-1 img-1 img-4 img-5";
+     gap: 1em;
+}
+
+.grid-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+
+.grid-container img :hover {
+    scale: 1.05;
+}
+
+details {
+    margin-top: 1em;
+    background-color: var(--base-color);
+    border-radius: 1em;
+}
+
+details summary {
+    margin-top: 1em;
+    font-size: 1.4rem;
+    font-family: Merriweather, Poppins;
+}
+
+details p {
+    padding: 0 2em 2em 2em;
+    font-size: 1.4rem;
+    font-family: Merriweather, Poppins;
+}
+
+footer {
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+footer a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+footer a :hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 800px){
+    .links-container{
+        
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        background-color: white;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.75s ease-out;
+    }
+nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+}
+.open-sidebar-button, .close-sidebar-button, utton{
+    padding: 20px;
+    display: block;
+}
+#sidebar-active:checked ~ .links-container{
+    right: 0;
+}
+#sidebar-active :checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+}
+
+@media(max-width: 998px){
+    header {
+        text-align: center;
+    }
+    header .text-container{
+        padding-top: 0;
+    }
+}
+
+@media(max-width: 640px) {
+    nav li {
+        display: none;
+    }
+
+    nav li :first-child, nav li :last-child {
+        display: block;
+    }
+
+    header {
+        margin-top: 0;
+    }
+
+    .cta-button {
+        margin-top: .5em;
+        width: 100%;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-container {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100% ;
+    }
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
